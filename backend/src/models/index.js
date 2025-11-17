@@ -1,4 +1,4 @@
-const { sequelize } = require('../config/database');
+const { sequelize, testConnection } = require('../config/database');
 const User = require('./User');
 const Project = require('./Project');
 const Keyword = require('./Keyword');
@@ -39,6 +39,7 @@ const syncDatabase = async (force = false) => {
 
 module.exports = {
   sequelize,
+  testConnection,
   User,
   Project,
   Keyword,
